@@ -21,7 +21,7 @@ function login() {
       var user = userCredential.user;
       console.log("User logged in:", user);
       alert("Login bem-sucedido!");
-      // Redirecionar para panel.html
+      // Redirecionar para Dashboard.html
       window.location.href = "Dashboard.html"; // Redireciona para a página do painel
     })
     .catch((error) => {
