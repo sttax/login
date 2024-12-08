@@ -9,6 +9,21 @@
     <title>Website de Portfólio</title>
 </head>
 <body>
+    <audio id="musicaFundo" autoplay loop>
+        <source src="365.mp3" type="audio/mp3">
+        <!-- Caso nenhum formato seja suportado -->
+        Seu navegador não suporta a tag de áudio.
+    </audio>
+    <script>
+        // Verificar se o áudio foi carregado e está tocando
+        const audio = document.getElementById('musicaFundo');
+        audio.onplay = function() {
+            console.log("A música começou a tocar!");
+        };
+        audio.onerror = function() {
+            console.log("Houve um erro ao tentar carregar o áudio.");
+        };
+    </script>
     <header>
         <a href="#" class="logo">Gustavo</a>
 
@@ -26,9 +41,9 @@
             <img src="main.jpg" alt="">
         </div>
         <div class="home-content">
-            <h1>Oi, eu sou <span>Gustavo</span></h1>
+            <h1>Ola, eu sou <span>Gustavo</span></h1>
             <h3 class="typing-text">Eu sou um <span></span></h3>
-            <p>Se o cliente for muito inteligente, ele conseguirá alcançar o resultado desejado. Deveria haver menos dores de parto. Ele odeia e está sujeito a dores e tristezas semelhantes; há vantagens na própria dívida de repúdio.</p>
+            <p>Se o cliente for muito inteligente, ele conseguirá alcançar o resultado desejado.</p>
         </div>
     </section>
 </body>

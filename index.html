@@ -5,27 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Painel De Login</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
 </head>
 <body>
   <!-- Vídeo de fundo -->
   <video id="background-video" autoplay loop muted>
     <source src="car.mp4" type="video/mp4">
+    Seu navegador não suporta a tag de vídeo.
   </video>
-  <audio controls>
+
+  <!-- Música de fundo -->
+  <audio id="music" loop>
     <source src="365.mp3" type="audio/mp3">
-    Seu navegador não suporta o elemento de áudio.
+    Seu navegador não suporta a tag de áudio.
   </audio>
-  <body>
-    <!-- Tela de Carregamento -->
-    <div id="loading-screen">
-        <div class="loader"></div>
-    </div>
-    <div id="content" style="display:none;">
-      <h1>Bem-vindo ao meu site!</h1>
-      <p>O conteúdo da página foi carregado.</p>
-  </div>
+
+  <!-- Caixa de Login -->
   <div class="login-box">
     <div class="login-header">
       <header>Painel</header>
@@ -55,6 +49,20 @@
     </div>
   </div>
 
+  <!-- Botão para tocar música -->
+  <div class="music-btn-container">
+    <button onclick="playMusic()" class="music-btn">
+      <span class="music-icon">🎶</span> Tocar Música
+    </button>
+  </div>
+
   <script src="script.js"></script>
+  <script>
+    // Função para tocar a música
+    function playMusic() {
+      var music = document.getElementById('music');
+      music.play();  // Tocar a música quando o usuário clicar no botão
+    }
+  </script>
 </body>
 </html>
